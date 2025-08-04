@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wes Anderson Movies</title>
+  <link rel="stylesheet" href="wesanderson.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="images/Logo.png" alt="Logo" />
+    </div>
+    <nav class="nav-buttons">
+       <a href="index.html" class="nav-link">LIFE</a>
+       <a href="movies.html" class="nav-link home-button">MOVIES</a>
+       <a href="awards.html" class="nav-link">AWARDS</a>
+    </nav>
+  </header>
+  <div class="ad-background">
+    <div class="banner-wrapper">
+      <img class="main-banner" src="images/Movies.jpg" alt="Main Banner" />
+      </div>
+  </div>
+
+
+       <div class="photo-grid">
+    <div class="video-container">
+      <video class="hover-video" src="images/The_Phoenician.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/The_Phoenician.jpg" alt="The Phoenician" />
+    </div>
+    <div class="video-container">
+      <video class="hover-video" src="images/Asteroid_City.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/Asteroid_City.jpg" alt="Asteroid City" />
+    </div>
+    <div class="video-container">
+      <video class="hover-video" src="images/The_French_Dispatch.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/The_French_Dispatch.jpg" alt="The French Dispatch" />
+    </div>
+    <div class="video-container">
+      <video class="hover-video" src="images/Isle_Of_Dog.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/Isle_Of_Dogs.jpg" alt="Isle Of Dog" />
+    </div>
+    <div class="video-container">
+      <video class="hover-video" src="images/The_Grand_Budapest_Hotel.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/The_Grand_Budapest_Hotel.jpg" alt="The Grand Budapest Hotel" />
+    </div>
+    <div class="video-container">
+      <video class="hover-video" src="images/Moonrise_Kingdoom.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/Moonrise_Kingdoom.jpg" alt="Moonrise Kingdoom" />
+    </div>
+    <div class="video-container">
+      <video class="hover-video" src="images/Fantastic_Mr_Fox.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/Fantastic_Mr_Fox.jpg" alt="Fantastic Mr Fox" />
+    </div>
+    <div class="video-container">
+      <video class="hover-video" src="images/The_Life_Aquatic.mp4" muted loop preload="none"></video>
+      <img class="thumbnail" src="images/The_Life_Aquatic.jpg" alt="The Life Aquatic" />
+    </div>
+  </div>
+
+  <footer class="site-footer">
+  <p>© 2025 Wes Anderson Website. Made by Bernard Kralj</p>
+</footer>
+
+<script>
+    const videoContainers = document.querySelectorAll('.video-container');
+
+    videoContainers.forEach(container => {
+      const video = container.querySelector('.hover-video');
+
+      container.addEventListener('mouseenter', () => {
+        video.currentTime = 0;
+        video.play();
+      });
+
+      container.addEventListener('mouseleave', () => {
+        video.pause();
+      });
+    });
+  </script>
+
+</body>
+</html>

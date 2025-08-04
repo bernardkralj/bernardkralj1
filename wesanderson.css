@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ebbe56;
+}
+
+.logo img {
+  height: 50px;
+  margin-left: 30px;
+}
+
+.nav-buttons .nav-link {
+  margin-left: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #ce7d07;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.nav-buttons .nav-link:hover {
+  background-color: #964c03;
+}
+
+.nav-buttons .home-button {
+  background-color: #964c03;
+  font-weight: bold;
+}
+
+.page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.main-banner {
+  width: 100%;
+  display: block;
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 50px;
+}
+
+.banner-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.main-text {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  position: relative;
+}
+
+.float-image {
+  float: right;
+  width: 360px;
+  margin: 0 0 10px 20px;
+}
+
+.site-footer {
+  background-color: #ebbe56;
+  padding: 50px 0;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto 30px;
+  padding: 0 15px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
+}
+.thumbnail,
+.hover-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+.hover-video {
+  opacity: 0;
+  pointer-events: none;
+}
+.video-container:hover .hover-video {
+  opacity: 1;
+}
+.video-container:hover .thumbnail {
+  opacity: 0;
+}
+
+.photo-title {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.text-photo-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 15px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-box h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.text-box p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.photo-box img {
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .text-photo-section {
+    grid-template-columns: 1fr;
+  }
+}
